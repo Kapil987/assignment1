@@ -30,7 +30,7 @@ metadata:
   name: web
 spec:
   serviceName: "nginx"
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
@@ -44,8 +44,8 @@ spec:
         image: kapil0123/nginx-statefulset:1.19
         resources:
           limits:
-            cpu: 100m # the CPU limit is define in milicore (m)
-            memory: 100Mi # the Memory is define in Mebibytes (Mi)
+            cpu: 100m
+            memory: 100Mi 
         ports:
         - containerPort: 80
           name: web
