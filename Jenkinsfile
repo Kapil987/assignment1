@@ -12,6 +12,6 @@ node () {
         }
 
         stage ('Deploy') {
-            kubectl apply -f nginx-deploy.yml
+            sh 'kubectl apply -f nginx-deploy.yml'
         }
 }
