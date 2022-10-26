@@ -13,7 +13,8 @@ node () {
         }
 
         stage ('Deploy') {
-            sh 'whoami'
+            withKubeConfig([credentialsId: 'kube-config', serverUrl: 'https://172.31.19.158:8443']) {
             sh 'kubectl apply -f nginx-deploy.yml'
+            }
         }
 }
