@@ -41,7 +41,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: registry.k8s.io/nginx-slim:0.8
+        image: kapil0123/nginx-statefulset:1.19
         resources:
           limits:
             cpu: 100m # the CPU limit is define in milicore (m)
